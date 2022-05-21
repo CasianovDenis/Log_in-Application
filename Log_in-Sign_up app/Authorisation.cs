@@ -18,7 +18,7 @@ namespace Log_in_Sign_up_app
 
         public Authorisation()
         {
-            this.BackgroundImage = Properties.Resources.background_image;
+            
             InitializeComponent();
         }
 
@@ -66,7 +66,8 @@ namespace Log_in_Sign_up_app
                 else
                     MessageBox.Show("Incorect password or username");
             }
-           
+            else
+                MessageBox.Show("Incorect password or username");
 
             con.Close();
         }
