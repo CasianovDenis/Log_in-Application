@@ -84,5 +84,11 @@ namespace Log_in_Sign_up_app
             SignUp SU = new SignUp();
             SU.ShowDialog();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPass FP = new ForgotPass();
+            FP.ShowDialog();
+        }
     }
 }

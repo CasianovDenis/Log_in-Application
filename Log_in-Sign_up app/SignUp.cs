@@ -16,8 +16,6 @@ namespace Log_in_Sign_up_app
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\project\Log_in-Sign_up app\Log_in-Sign_up app\Database.mdf;Integrated Security=True");
 
-
-
         public SignUp()
         {
             InitializeComponent();
