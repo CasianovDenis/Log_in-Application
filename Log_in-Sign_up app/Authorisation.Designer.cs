@@ -94,7 +94,7 @@ namespace Log_in_Sign_up_app
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 25);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Authorization";
+            this.label3.Text = "Authorisation";
             // 
             // linkLabel1
             // 
