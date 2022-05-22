@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Threading;
 
 namespace Log_in_Sign_up_app
 {
@@ -28,16 +28,34 @@ namespace Log_in_Sign_up_app
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Boolean flag = false;
                         
            con.Open();
             
-            SqlCommand cmd = new SqlCommand("INSERT INTO MyTable(ID,Username,Password) values('" + null +"','"+usernameTextBox.Text +"','"+passwordTextBox.Text+"')",con);
-            cmd.ExecuteNonQuery();
-             con.Close();
-            MessageBox.Show("Account Created Succesfully");
-            this.Close();
+                
+                try
+                {
+                    
+                    SqlCommand cmd = new SqlCommand("INSERT INTO MyTable(ID,Username,Password) values('" + null + "','" + usernameTextBox.Text + "','" + passwordTextBox.Text + "')", con);
+                    cmd.ExecuteNonQuery();
+                flag = true;
+                    
+                }
+                catch
+                {
+                    MessageBox.Show("This username already exist");
+                    usernameTextBox.Clear();
+                    passwordTextBox.Clear();
+                flag = false;
+                }
 
+            con.Close();
+
+            if (flag == true)
+            {
+                MessageBox.Show("Account Created Succesfully");
+                this.Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
