@@ -27,14 +27,14 @@ namespace Log_in_Sign_up_app
             checkBox1.Checked = Properties.Settings.Default.SaveCheck;
             if (checkBox1.Checked == false)
             {
-                checkBox1.Checked = false;
+                
                 textBox1.Clear();
                 textBox2.Clear();
             }
             else
             if (checkBox1.Checked == true)
             {
-                checkBox1.Checked = true;
+                
                 textBox1.Text = Properties.Settings.Default.Username;
                 textBox2.Text = Properties.Settings.Default.Password;
             }
