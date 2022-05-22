@@ -42,7 +42,6 @@ namespace Log_in_Sign_up_app
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
 
             con.Open();
             string query_username = string.Format("select username from MyTable " +

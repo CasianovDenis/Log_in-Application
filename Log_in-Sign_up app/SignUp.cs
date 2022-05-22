@@ -31,12 +31,12 @@ namespace Log_in_Sign_up_app
             Boolean flag = false;
                         
            con.Open();
-            
-                
-                try
+
+            //try get exist username
+            try
                 {
-                    
-                    SqlCommand cmd = new SqlCommand("INSERT INTO MyTable(ID,Username,Password) values('" + null + "','" + usernameTextBox.Text + "','" + passwordTextBox.Text + "')", con);
+               
+                SqlCommand cmd = new SqlCommand("INSERT INTO MyTable(ID,Username,Password) values('" + null + "','" + usernameTextBox.Text + "','" + passwordTextBox.Text + "')", con);
                     cmd.ExecuteNonQuery();
                 flag = true;
                     
@@ -58,6 +58,7 @@ namespace Log_in_Sign_up_app
             }
         }
 
+        
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
