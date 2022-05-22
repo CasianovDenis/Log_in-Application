@@ -24,13 +24,32 @@ namespace Log_in_Sign_up_app
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            checkBox1.Checked=Properties.Settings.Default.SaveCheck;
-            textBox1.Text = Properties.Settings.Default.Username;
-            textBox2.Text = Properties.Settings.Default.Password;
+            checkBox1.Checked = Properties.Settings.Default.SaveCheck;
+            if (checkBox1.Checked == false)
+            {
+                checkBox1.Checked = false;
+                textBox1.Clear();
+                textBox2.Clear();
+            }
+            else
+            if (checkBox1.Checked == true)
+            {
+                checkBox1.Checked = true;
+                textBox1.Text = Properties.Settings.Default.Username;
+                textBox2.Text = Properties.Settings.Default.Password;
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (checkBox1.Checked == false)
+            {
+                Properties.Settings.Default.SaveCheck = false;
+                Properties.Settings.Default.Username = "";
+                Properties.Settings.Default.Password = "";
+                Properties.Settings.Default.Save();
+            }
+            else
             if (checkBox1.Checked == true)
             {
                 Properties.Settings.Default.SaveCheck = checkBox1.Checked;
@@ -89,5 +108,7 @@ namespace Log_in_Sign_up_app
             ForgotPass FP = new ForgotPass();
             FP.ShowDialog();
         }
+
+        
     }
 }

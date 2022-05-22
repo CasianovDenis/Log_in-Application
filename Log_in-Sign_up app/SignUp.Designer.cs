@@ -50,6 +50,7 @@ namespace Log_in_Sign_up_app
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
+            usernameLabel.ForeColor = System.Drawing.Color.White;
             usernameLabel.Location = new System.Drawing.Point(106, 63);
             usernameLabel.Name = "usernameLabel";
             usernameLabel.Size = new System.Drawing.Size(58, 13);
@@ -59,6 +60,7 @@ namespace Log_in_Sign_up_app
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
+            passwordLabel.ForeColor = System.Drawing.Color.White;
             passwordLabel.Location = new System.Drawing.Point(108, 115);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new System.Drawing.Size(56, 13);
@@ -67,6 +69,8 @@ namespace Log_in_Sign_up_app
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(111, 167);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 36);
@@ -117,6 +121,7 @@ namespace Log_in_Sign_up_app
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(140, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 24);
@@ -125,6 +130,8 @@ namespace Log_in_Sign_up_app
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(250, 174);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
@@ -137,6 +144,7 @@ namespace Log_in_Sign_up_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(425, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);

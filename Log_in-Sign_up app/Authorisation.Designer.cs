@@ -29,26 +29,28 @@ namespace Log_in_Sign_up_app
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Log_In_button = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.Sign_up_link = new System.Windows.Forms.LinkLabel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.Restore_pass_link = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // button1
+            // Log_In_button
             // 
-            this.button1.Location = new System.Drawing.Point(136, 234);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Log In";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Log_In_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Log_In_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Log_In_button.Location = new System.Drawing.Point(136, 234);
+            this.Log_In_button.Name = "Log_In_button";
+            this.Log_In_button.Size = new System.Drawing.Size(75, 23);
+            this.Log_In_button.TabIndex = 0;
+            this.Log_In_button.Text = "Log In";
+            this.Log_In_button.UseVisualStyleBackColor = true;
+            this.Log_In_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -70,49 +72,55 @@ namespace Log_in_Sign_up_app
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(43, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Username";
+            this.label1.Text = "Username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(43, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Password";
+            this.label2.Text = "Password:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(118, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Authorisation";
             // 
-            // linkLabel1
+            // Sign_up_link
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(233, 239);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(45, 13);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sign Up";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.Sign_up_link.AutoSize = true;
+            this.Sign_up_link.BackColor = System.Drawing.Color.Transparent;
+            this.Sign_up_link.LinkColor = System.Drawing.Color.White;
+            this.Sign_up_link.Location = new System.Drawing.Point(233, 239);
+            this.Sign_up_link.Name = "Sign_up_link";
+            this.Sign_up_link.Size = new System.Drawing.Size(45, 13);
+            this.Sign_up_link.TabIndex = 7;
+            this.Sign_up_link.TabStop = true;
+            this.Sign_up_link.Text = "Sign Up";
+            this.Sign_up_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(136, 193);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(77, 17);
@@ -120,31 +128,34 @@ namespace Log_in_Sign_up_app
             this.checkBox1.Text = "Remember";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
-            // linkLabel2
+            // Restore_pass_link
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(233, 274);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(92, 13);
-            this.linkLabel2.TabIndex = 9;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Forgot Password?";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.Restore_pass_link.AutoSize = true;
+            this.Restore_pass_link.LinkColor = System.Drawing.Color.White;
+            this.Restore_pass_link.Location = new System.Drawing.Point(233, 274);
+            this.Restore_pass_link.Name = "Restore_pass_link";
+            this.Restore_pass_link.Size = new System.Drawing.Size(92, 13);
+            this.Restore_pass_link.TabIndex = 9;
+            this.Restore_pass_link.TabStop = true;
+            this.Restore_pass_link.Text = "Forgot Password?";
+            this.Restore_pass_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // Authorisation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(403, 450);
-            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.Restore_pass_link);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.Sign_up_link);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Log_In_button);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Authorisation";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -156,15 +167,15 @@ namespace Log_in_Sign_up_app
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Log_In_button;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel Sign_up_link;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel Restore_pass_link;
     }
 }
 

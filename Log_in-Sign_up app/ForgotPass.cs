@@ -37,7 +37,7 @@ namespace Log_in_Sign_up_app
             if (reader.Read() == true)
             {                         
                     MessageBox.Show("You password:"+reader.GetString(0));
-                this.Close();
+               
             }
             else
                 MessageBox.Show("Incorect username or account not created");

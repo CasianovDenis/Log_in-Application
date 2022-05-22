@@ -25,7 +25,6 @@ namespace Log_in_Sign_up_app.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool SaveCheck {
             get {
                 return ((bool)(this["SaveCheck"]));

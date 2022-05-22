@@ -38,9 +38,9 @@ namespace Log_in_Sign_up_app
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(286, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 21);
+            this.label1.Size = new System.Drawing.Size(43, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "                     ";
+            this.label1.Text = "Text";
             // 
             // Log_In
             // 
