@@ -26,28 +26,28 @@ namespace Log_in_Sign_up_app
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void create_acc_button_Click(object sender, EventArgs e)
         {
             Boolean flag = false;
-                        
-           con.Open();
+
+            con.Open();
 
             //try get exist username
             try
-                {
-               
+            {
+
                 SqlCommand cmd = new SqlCommand("INSERT INTO MyTable(ID,Username,Password) values('" + null + "','" + usernameTextBox.Text + "','" + passwordTextBox.Text + "')", con);
-                    cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 flag = true;
-                    
-                }
-                catch
-                {
-                    MessageBox.Show("This username already exist");
-                    usernameTextBox.Clear();
-                    passwordTextBox.Clear();
+
+            }
+            catch
+            {
+                MessageBox.Show("This username already exist");
+                usernameTextBox.Clear();
+                passwordTextBox.Clear();
                 flag = false;
-                }
+            }
 
             con.Close();
 
@@ -58,8 +58,8 @@ namespace Log_in_Sign_up_app
             }
         }
 
-        
-        private void button2_Click(object sender, EventArgs e)
+
+        private void exit_button_Click(object sender, EventArgs e)
         {
             this.Close();
         }

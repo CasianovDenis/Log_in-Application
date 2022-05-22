@@ -31,10 +31,10 @@ namespace Log_in_Sign_up_app
         {
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.usernametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.restore_pass_button = new System.Windows.Forms.Button();
+            this.exit_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -60,12 +60,12 @@ namespace Log_in_Sign_up_app
             this.label1.TabIndex = 8;
             this.label1.Text = "Username:";
             // 
-            // textBox1
+            // usernametextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.usernametextBox.Location = new System.Drawing.Point(118, 119);
+            this.usernametextBox.Name = "usernametextBox";
+            this.usernametextBox.Size = new System.Drawing.Size(100, 20);
+            this.usernametextBox.TabIndex = 7;
             // 
             // label2
             // 
@@ -77,29 +77,29 @@ namespace Log_in_Sign_up_app
             this.label2.TabIndex = 10;
             this.label2.Text = "Insert you username";
             // 
-            // button1
+            // restore_pass_button
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(65, 193);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Restore pass";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.restore_pass_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.restore_pass_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.restore_pass_button.Location = new System.Drawing.Point(65, 193);
+            this.restore_pass_button.Name = "restore_pass_button";
+            this.restore_pass_button.Size = new System.Drawing.Size(88, 23);
+            this.restore_pass_button.TabIndex = 11;
+            this.restore_pass_button.Text = "Restore pass";
+            this.restore_pass_button.UseVisualStyleBackColor = true;
+            this.restore_pass_button.Click += new System.EventHandler(this.restore_pass_button_Click);
             // 
-            // button2
+            // exit_button
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(171, 192);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.exit_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit_button.Location = new System.Drawing.Point(171, 192);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(75, 23);
+            this.exit_button.TabIndex = 12;
+            this.exit_button.Text = "Exit";
+            this.exit_button.UseVisualStyleBackColor = true;
+            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // ForgotPass
             // 
@@ -107,12 +107,12 @@ namespace Log_in_Sign_up_app
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(341, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.exit_button);
+            this.Controls.Add(this.restore_pass_button);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.usernametextBox);
             this.Name = "ForgotPass";
             this.Text = "ForgotPass";
             this.Load += new System.EventHandler(this.ForgotPass_Load);
@@ -125,9 +125,9 @@ namespace Log_in_Sign_up_app
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox usernametextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button restore_pass_button;
+        private System.Windows.Forms.Button exit_button;
     }
 }

@@ -30,8 +30,8 @@ namespace Log_in_Sign_up_app
         private void InitializeComponent()
         {
             this.Log_In_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usernametextBox = new System.Windows.Forms.TextBox();
+            this.passwordtextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,23 +50,23 @@ namespace Log_in_Sign_up_app
             this.Log_In_button.TabIndex = 0;
             this.Log_In_button.Text = "Log In";
             this.Log_In_button.UseVisualStyleBackColor = true;
-            this.Log_In_button.Click += new System.EventHandler(this.button1_Click);
+            this.Log_In_button.Click += new System.EventHandler(this.Logn_In_button_Click);
             // 
-            // textBox1
+            // usernametextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.usernametextBox.Location = new System.Drawing.Point(136, 81);
+            this.usernametextBox.Name = "usernametextBox";
+            this.usernametextBox.Size = new System.Drawing.Size(100, 20);
+            this.usernametextBox.TabIndex = 2;
             // 
-            // textBox2
+            // passwordtextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.passwordtextBox.Location = new System.Drawing.Point(136, 154);
+            this.passwordtextBox.Name = "passwordtextBox";
+            this.passwordtextBox.PasswordChar = '*';
+            this.passwordtextBox.Size = new System.Drawing.Size(100, 20);
+            this.passwordtextBox.TabIndex = 3;
+            this.passwordtextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
             // 
@@ -113,7 +113,7 @@ namespace Log_in_Sign_up_app
             this.Sign_up_link.TabIndex = 7;
             this.Sign_up_link.TabStop = true;
             this.Sign_up_link.Text = "Sign Up";
-            this.Sign_up_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.Sign_up_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Sign_up_link_LinkClicked);
             // 
             // checkBox1
             // 
@@ -138,7 +138,7 @@ namespace Log_in_Sign_up_app
             this.Restore_pass_link.TabIndex = 9;
             this.Restore_pass_link.TabStop = true;
             this.Restore_pass_link.Text = "Forgot Password?";
-            this.Restore_pass_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.Restore_pass_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Restore_pass_link_LinkClicked);
             // 
             // Authorisation
             // 
@@ -151,15 +151,15 @@ namespace Log_in_Sign_up_app
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passwordtextBox);
+            this.Controls.Add(this.usernametextBox);
             this.Controls.Add(this.Log_In_button);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Authorisation";
-            this.Text = "Form1";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Authorisation";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Authorisation_FormClosing);
+            this.Load += new System.EventHandler(this.Authorisation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,8 +168,8 @@ namespace Log_in_Sign_up_app
         #endregion
 
         private System.Windows.Forms.Button Log_In_button;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usernametextBox;
+        private System.Windows.Forms.TextBox passwordtextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -25,26 +25,26 @@ namespace Log_in_Sign_up_app
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void restore_pass_button_Click(object sender, EventArgs e)
         {
             con.Open();
             string query_restore_pass = string.Format("select password from MyTable " +
-               "where username='{0}'", textBox1.Text);
-            
+               "where username='{0}'", usernametextBox.Text);
+
 
             SqlCommand cmd = new SqlCommand(query_restore_pass, con);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read() == true)
-            {                         
-                    MessageBox.Show("You password:"+reader.GetString(0));
-               
+            {
+                MessageBox.Show("You password:" + reader.GetString(0));
+
             }
             else
                 MessageBox.Show("Incorect username or account not created");
             con.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void exit_button_Click(object sender, EventArgs e)
         {
             this.Close();
         }

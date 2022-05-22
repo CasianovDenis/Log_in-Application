@@ -32,7 +32,7 @@ namespace Log_in_Sign_up_app
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label usernameLabel;
             System.Windows.Forms.Label passwordLabel;
-            this.button1 = new System.Windows.Forms.Button();
+            this.create_acc_button = new System.Windows.Forms.Button();
             this.signUp_LogInDataSet = new Log_in_Sign_up_app.SignUp_LogInDataSet();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter = new Log_in_Sign_up_app.SignUp_LogInDataSetTableAdapters.TableTableAdapter();
@@ -40,7 +40,7 @@ namespace Log_in_Sign_up_app
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.exit_button = new System.Windows.Forms.Button();
             usernameLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.signUp_LogInDataSet)).BeginInit();
@@ -67,17 +67,17 @@ namespace Log_in_Sign_up_app
             passwordLabel.TabIndex = 13;
             passwordLabel.Text = "Password:";
             // 
-            // button1
+            // create_acc_button
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(111, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 36);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Create Account";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.create_acc_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.create_acc_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create_acc_button.Location = new System.Drawing.Point(111, 167);
+            this.create_acc_button.Name = "create_acc_button";
+            this.create_acc_button.Size = new System.Drawing.Size(78, 36);
+            this.create_acc_button.TabIndex = 11;
+            this.create_acc_button.Text = "Create Account";
+            this.create_acc_button.UseVisualStyleBackColor = true;
+            this.create_acc_button.Click += new System.EventHandler(this.create_acc_button_Click);
             // 
             // signUp_LogInDataSet
             // 
@@ -128,17 +128,17 @@ namespace Log_in_Sign_up_app
             this.label1.TabIndex = 15;
             this.label1.Text = "Create Account";
             // 
-            // button2
+            // exit_button
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(250, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.exit_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit_button.Location = new System.Drawing.Point(250, 174);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(75, 23);
+            this.exit_button.TabIndex = 16;
+            this.exit_button.Text = "Exit";
+            this.exit_button.UseVisualStyleBackColor = true;
+            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // SignUp
             // 
@@ -146,13 +146,13 @@ namespace Log_in_Sign_up_app
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(425, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.exit_button);
             this.Controls.Add(this.label1);
             this.Controls.Add(passwordLabel);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(usernameLabel);
             this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.create_acc_button);
             this.Name = "SignUp";
             this.Text = "SignUp";
             this.Load += new System.EventHandler(this.SignUp_Load);
@@ -164,7 +164,7 @@ namespace Log_in_Sign_up_app
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button create_acc_button;
         private SignUp_LogInDataSet signUp_LogInDataSet;
         private System.Windows.Forms.BindingSource tableBindingSource;
         private SignUp_LogInDataSetTableAdapters.TableTableAdapter tableTableAdapter;
@@ -172,6 +172,6 @@ namespace Log_in_Sign_up_app
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button exit_button;
     }
 }

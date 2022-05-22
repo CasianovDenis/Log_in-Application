@@ -22,25 +22,25 @@ namespace Log_in_Sign_up_app
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Authorisation_Load(object sender, EventArgs e)
         {
             checkBox1.Checked = Properties.Settings.Default.SaveCheck;
             if (checkBox1.Checked == false)
             {
-                
-                textBox1.Clear();
-                textBox2.Clear();
+
+                usernametextBox.Clear();
+                passwordtextBox.Clear();
             }
             else
             if (checkBox1.Checked == true)
             {
-                
-                textBox1.Text = Properties.Settings.Default.Username;
-                textBox2.Text = Properties.Settings.Default.Password;
+
+                usernametextBox.Text = Properties.Settings.Default.Username;
+                passwordtextBox.Text = Properties.Settings.Default.Password;
             }
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void Authorisation_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (checkBox1.Checked == false)
             {
@@ -53,20 +53,20 @@ namespace Log_in_Sign_up_app
             if (checkBox1.Checked == true)
             {
                 Properties.Settings.Default.SaveCheck = checkBox1.Checked;
-                Properties.Settings.Default.Username = textBox1.Text;
-                Properties.Settings.Default.Password = textBox2.Text;
+                Properties.Settings.Default.Username = usernametextBox.Text;
+                Properties.Settings.Default.Password = passwordtextBox.Text;
                 Properties.Settings.Default.Save();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Logn_In_button_Click(object sender, EventArgs e)
         {
 
             con.Open();
             string query_username = string.Format("select username from MyTable " +
-               "where username='{0}'", textBox1.Text);
+               "where username='{0}'", usernametextBox.Text);
             string query_password = string.Format("select password from MyTable " +
-               "where  password='{0}'", textBox2.Text);
+               "where  password='{0}'", passwordtextBox.Text);
 
             SqlCommand cmd = new SqlCommand(query_username, con);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -78,7 +78,7 @@ namespace Log_in_Sign_up_app
                 if (reader1.Read() == true)
                 {
                     MessageBox.Show("Successful authentication");
-                    Log_In LI = new Log_In(textBox1.Text);
+                    Log_In LI = new Log_In(usernametextBox.Text);
                     LI.ShowDialog();
                 }
                 else
@@ -93,22 +93,22 @@ namespace Log_in_Sign_up_app
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
-            Console.WriteLine(textBox2.Text);
+            Console.WriteLine(passwordtextBox.Text);
             
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Sign_up_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SignUp SU = new SignUp();
             SU.ShowDialog();
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Restore_pass_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ForgotPass FP = new ForgotPass();
             FP.ShowDialog();
         }
 
-        
+
     }
 }
