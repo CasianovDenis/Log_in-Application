@@ -29,19 +29,63 @@ namespace Log_in_Sign_up_app
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.username_label = new System.Windows.Forms.Label();
+            this.email_label = new System.Windows.Forms.Label();
+            this.change_username_button = new System.Windows.Forms.Button();
+            this.change_email_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(187, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Text";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(147, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Account Data:";
+            // 
+            // username_label
+            // 
+            this.username_label.AutoSize = true;
+            this.username_label.ForeColor = System.Drawing.Color.White;
+            this.username_label.Location = new System.Drawing.Point(82, 94);
+            this.username_label.Name = "username_label";
+            this.username_label.Size = new System.Drawing.Size(58, 13);
+            this.username_label.TabIndex = 2;
+            this.username_label.Text = "Username:";
+            // 
+            // email_label
+            // 
+            this.email_label.AutoSize = true;
+            this.email_label.ForeColor = System.Drawing.Color.White;
+            this.email_label.Location = new System.Drawing.Point(82, 195);
+            this.email_label.Name = "email_label";
+            this.email_label.Size = new System.Drawing.Size(35, 13);
+            this.email_label.TabIndex = 3;
+            this.email_label.Text = "Email:";
+            // 
+            // change_username_button
+            // 
+            this.change_username_button.Location = new System.Drawing.Point(85, 121);
+            this.change_username_button.Name = "change_username_button";
+            this.change_username_button.Size = new System.Drawing.Size(107, 23);
+            this.change_username_button.TabIndex = 4;
+            this.change_username_button.Text = "Change username";
+            this.change_username_button.UseVisualStyleBackColor = true;
+            this.change_username_button.Click += new System.EventHandler(this.change_username_button_Click);
+            // 
+            // change_email_button
+            // 
+            this.change_email_button.Location = new System.Drawing.Point(85, 229);
+            this.change_email_button.Name = "change_email_button";
+            this.change_email_button.Size = new System.Drawing.Size(107, 23);
+            this.change_email_button.TabIndex = 5;
+            this.change_email_button.Text = "Change email";
+            this.change_email_button.UseVisualStyleBackColor = true;
+            this.change_email_button.Click += new System.EventHandler(this.change_email_button_Click);
             // 
             // Log_In
             // 
@@ -49,7 +93,11 @@ namespace Log_in_Sign_up_app
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(453, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.change_email_button);
+            this.Controls.Add(this.change_username_button);
+            this.Controls.Add(this.email_label);
+            this.Controls.Add(this.username_label);
+            this.Controls.Add(this.label2);
             this.Name = "Log_In";
             this.Text = "Log_In";
             this.Load += new System.EventHandler(this.Log_In_Load);
@@ -59,7 +107,10 @@ namespace Log_in_Sign_up_app
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label username_label;
+        private System.Windows.Forms.Label email_label;
+        private System.Windows.Forms.Button change_username_button;
+        private System.Windows.Forms.Button change_email_button;
     }
 }
