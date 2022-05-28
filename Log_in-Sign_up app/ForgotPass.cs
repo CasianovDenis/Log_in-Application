@@ -29,18 +29,19 @@ namespace Log_in_Sign_up_app
         {
             con.Open();
             string query_restore_pass = string.Format("select password from MyTable " +
-               "where username='{0}'", usernametextBox.Text);
+               "where email='{0}'", emailtextBox.Text);
 
 
             SqlCommand cmd = new SqlCommand(query_restore_pass, con);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read() == true)
             {
-                MessageBox.Show("You password:" + reader.GetString(0));
+               display_pass_label.Text="You password: " + reader.GetString(0);
+                display_pass_label.Visible = true;
 
             }
             else
-                MessageBox.Show("Incorect username or account not created");
+                MessageBox.Show("Incorect email or account not created");
             con.Close();
         }
 

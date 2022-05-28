@@ -31,10 +31,11 @@ namespace Log_in_Sign_up_app
         {
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.usernametextBox = new System.Windows.Forms.TextBox();
+            this.emailtextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.restore_pass_button = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
+            this.display_pass_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -56,16 +57,16 @@ namespace Log_in_Sign_up_app
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(32, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Username:";
+            this.label1.Text = "Email:";
             // 
-            // usernametextBox
+            // emailtextBox
             // 
-            this.usernametextBox.Location = new System.Drawing.Point(118, 119);
-            this.usernametextBox.Name = "usernametextBox";
-            this.usernametextBox.Size = new System.Drawing.Size(100, 20);
-            this.usernametextBox.TabIndex = 7;
+            this.emailtextBox.Location = new System.Drawing.Point(118, 119);
+            this.emailtextBox.Name = "emailtextBox";
+            this.emailtextBox.Size = new System.Drawing.Size(129, 20);
+            this.emailtextBox.TabIndex = 7;
             // 
             // label2
             // 
@@ -73,9 +74,9 @@ namespace Log_in_Sign_up_app
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(62, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 13);
+            this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Insert you username";
+            this.label2.Text = "Insert you email";
             // 
             // restore_pass_button
             // 
@@ -101,18 +102,30 @@ namespace Log_in_Sign_up_app
             this.exit_button.UseVisualStyleBackColor = true;
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
+            // display_pass_label
+            // 
+            this.display_pass_label.AutoSize = true;
+            this.display_pass_label.ForeColor = System.Drawing.Color.White;
+            this.display_pass_label.Location = new System.Drawing.Point(118, 158);
+            this.display_pass_label.Name = "display_pass_label";
+            this.display_pass_label.Size = new System.Drawing.Size(59, 13);
+            this.display_pass_label.TabIndex = 13;
+            this.display_pass_label.Text = "forgot pass";
+            this.display_pass_label.Visible = false;
+            // 
             // ForgotPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(341, 450);
+            this.Controls.Add(this.display_pass_label);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.restore_pass_button);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.usernametextBox);
+            this.Controls.Add(this.emailtextBox);
             this.Name = "ForgotPass";
             this.Text = "ForgotPass";
             this.Load += new System.EventHandler(this.ForgotPass_Load);
@@ -125,9 +138,10 @@ namespace Log_in_Sign_up_app
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox usernametextBox;
+        private System.Windows.Forms.TextBox emailtextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button restore_pass_button;
         private System.Windows.Forms.Button exit_button;
+        private System.Windows.Forms.Label display_pass_label;
     }
 }
