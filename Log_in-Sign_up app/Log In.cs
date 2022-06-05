@@ -51,5 +51,10 @@ namespace Log_in_Sign_up_app
             Change_email CE = new Change_email();
             CE.ShowDialog();
         }
+
+        private void exitbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

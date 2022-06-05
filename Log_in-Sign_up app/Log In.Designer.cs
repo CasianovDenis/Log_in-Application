@@ -34,6 +34,7 @@ namespace Log_in_Sign_up_app
             this.email_label = new System.Windows.Forms.Label();
             this.change_username_button = new System.Windows.Forms.Button();
             this.change_email_button = new System.Windows.Forms.Button();
+            this.exitbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -87,12 +88,23 @@ namespace Log_in_Sign_up_app
             this.change_email_button.UseVisualStyleBackColor = true;
             this.change_email_button.Click += new System.EventHandler(this.change_email_button_Click);
             // 
+            // exitbutton
+            // 
+            this.exitbutton.Location = new System.Drawing.Point(336, 301);
+            this.exitbutton.Name = "exitbutton";
+            this.exitbutton.Size = new System.Drawing.Size(75, 23);
+            this.exitbutton.TabIndex = 6;
+            this.exitbutton.Text = "Exit";
+            this.exitbutton.UseVisualStyleBackColor = true;
+            this.exitbutton.Click += new System.EventHandler(this.exitbutton_Click);
+            // 
             // Log_In
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(453, 450);
+            this.Controls.Add(this.exitbutton);
             this.Controls.Add(this.change_email_button);
             this.Controls.Add(this.change_username_button);
             this.Controls.Add(this.email_label);
@@ -112,5 +124,6 @@ namespace Log_in_Sign_up_app
         private System.Windows.Forms.Label email_label;
         private System.Windows.Forms.Button change_username_button;
         private System.Windows.Forms.Button change_email_button;
+        private System.Windows.Forms.Button exitbutton;
     }
 }
