@@ -70,6 +70,7 @@ namespace Log_in_Sign_up_app
             // 
             // change_username_button
             // 
+            this.change_username_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.change_username_button.Location = new System.Drawing.Point(85, 121);
             this.change_username_button.Name = "change_username_button";
             this.change_username_button.Size = new System.Drawing.Size(107, 23);
@@ -80,6 +81,7 @@ namespace Log_in_Sign_up_app
             // 
             // change_email_button
             // 
+            this.change_email_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.change_email_button.Location = new System.Drawing.Point(85, 229);
             this.change_email_button.Name = "change_email_button";
             this.change_email_button.Size = new System.Drawing.Size(107, 23);
@@ -90,6 +92,7 @@ namespace Log_in_Sign_up_app
             // 
             // exitbutton
             // 
+            this.exitbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitbutton.Location = new System.Drawing.Point(336, 301);
             this.exitbutton.Name = "exitbutton";
             this.exitbutton.Size = new System.Drawing.Size(75, 23);

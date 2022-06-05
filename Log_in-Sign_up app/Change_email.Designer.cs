@@ -59,6 +59,7 @@ namespace Log_in_Sign_up_app
             // 
             // change_button
             // 
+            this.change_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.change_button.ForeColor = System.Drawing.Color.Black;
             this.change_button.Location = new System.Drawing.Point(128, 198);
             this.change_button.Name = "change_button";
