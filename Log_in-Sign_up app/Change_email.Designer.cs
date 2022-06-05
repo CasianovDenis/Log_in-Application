@@ -104,6 +104,7 @@ namespace Log_in_Sign_up_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(324, 248);
             this.Controls.Add(this.exist_email_label);
             this.Controls.Add(this.label3);
@@ -112,6 +113,7 @@ namespace Log_in_Sign_up_app
             this.Controls.Add(this.old_email_textBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "Change_email";
             this.Text = "Change_email";
             this.Load += new System.EventHandler(this.Change_email_Load);
