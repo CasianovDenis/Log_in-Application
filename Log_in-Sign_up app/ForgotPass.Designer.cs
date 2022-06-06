@@ -35,7 +35,6 @@ namespace Log_in_Sign_up_app
             this.label2 = new System.Windows.Forms.Label();
             this.restore_pass_button = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
-            this.display_pass_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -102,24 +101,12 @@ namespace Log_in_Sign_up_app
             this.exit_button.UseVisualStyleBackColor = true;
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
-            // display_pass_label
-            // 
-            this.display_pass_label.AutoSize = true;
-            this.display_pass_label.ForeColor = System.Drawing.Color.White;
-            this.display_pass_label.Location = new System.Drawing.Point(118, 158);
-            this.display_pass_label.Name = "display_pass_label";
-            this.display_pass_label.Size = new System.Drawing.Size(59, 13);
-            this.display_pass_label.TabIndex = 13;
-            this.display_pass_label.Text = "forgot pass";
-            this.display_pass_label.Visible = false;
-            // 
             // ForgotPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(341, 450);
-            this.Controls.Add(this.display_pass_label);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.restore_pass_button);
             this.Controls.Add(this.label2);
@@ -142,6 +129,5 @@ namespace Log_in_Sign_up_app
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button restore_pass_button;
         private System.Windows.Forms.Button exit_button;
-        private System.Windows.Forms.Label display_pass_label;
     }
 }
