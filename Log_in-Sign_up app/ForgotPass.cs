@@ -5,6 +5,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,12 +38,24 @@ namespace Log_in_Sign_up_app
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read() == true)
             {
-               display_pass_label.Text="You password: " + reader.GetString(0);
-                display_pass_label.Visible = true;
+                SmtpClient Smtp = new SmtpClient("smtp.mail.ru", 587);
+                Smtp.EnableSsl = true;
+                Smtp.Credentials = new NetworkCredential("email@mail.ru", "password");//real email and password
+                                                                         //was hide
 
+                MailMessage Message = new MailMessage();
+                Message.From = new MailAddress("email@mail.ru");//real email was hide
+                Message.To.Add(new MailAddress(emailtextBox.Text));
+                Message.Subject = "Restore password";
+                Message.Body = "Password:" + reader.GetString(0) + "\n" +
+                    "If is not you request,please change password in application.";
+
+                Smtp.Send(Message);
+                MessageBox.Show("You password was sent to email");
+                this.Close();
             }
             else
-                MessageBox.Show("Incorect email or account not created");
+                MessageBox.Show("Incorect email");
             con.Close();
         }
 
