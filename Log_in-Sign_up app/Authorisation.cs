@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Log_in_Sign_up_app.Properties;
+using Google.Authenticator;
 
 namespace Log_in_Sign_up_app
 {
@@ -67,6 +68,8 @@ namespace Log_in_Sign_up_app
                "where username='{0}'", usernametextBox.Text);
             string query_password = string.Format("select password from MyTable " +
                "where  password='{0}'", passwordtextBox.Text);
+            string query_auth2 = string.Format("select auth2 from MyTable " +
+               "where username='{0}'", usernametextBox.Text);
 
             SqlCommand cmd = new SqlCommand(query_username, con);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -77,9 +80,25 @@ namespace Log_in_Sign_up_app
                 SqlDataReader reader1 = cmd1.ExecuteReader();
                 if (reader1.Read() == true)
                 {
-                    MessageBox.Show("Successful authentication");
-                    Log_In LI = new Log_In(usernametextBox.Text);
-                    LI.ShowDialog();
+                    reader1.Close();
+                    SqlCommand cmd2 = new SqlCommand(query_auth2, con);
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+                    
+                    if (reader2.Read() == true)
+                    {
+                        if (reader2.GetString(0) == "1")
+                        {
+                            Verifieaf2 Vaf2 = new Verifieaf2(usernametextBox.Text);
+                            Vaf2.ShowDialog();
+                        }
+                        else
+                            if (reader2.GetString(0) == "0")
+                        {
+                            MessageBox.Show("Successful authentication");
+                            Log_In LI = new Log_In(usernametextBox.Text);
+                            LI.ShowDialog();
+                        }
+                    }
                 }
                 else
                     MessageBox.Show("Incorect password or username");
@@ -109,6 +128,6 @@ namespace Log_in_Sign_up_app
             FP.ShowDialog();
         }
 
-
+        
     }
 }

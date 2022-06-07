@@ -35,6 +35,8 @@ namespace Log_in_Sign_up_app
             this.change_username_button = new System.Windows.Forms.Button();
             this.change_email_button = new System.Windows.Forms.Button();
             this.exitbutton = new System.Windows.Forms.Button();
+            this.auth2_button = new System.Windows.Forms.Button();
+            this.auth2_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -52,7 +54,7 @@ namespace Log_in_Sign_up_app
             // 
             this.username_label.AutoSize = true;
             this.username_label.ForeColor = System.Drawing.Color.White;
-            this.username_label.Location = new System.Drawing.Point(82, 94);
+            this.username_label.Location = new System.Drawing.Point(25, 66);
             this.username_label.Name = "username_label";
             this.username_label.Size = new System.Drawing.Size(58, 13);
             this.username_label.TabIndex = 2;
@@ -62,7 +64,7 @@ namespace Log_in_Sign_up_app
             // 
             this.email_label.AutoSize = true;
             this.email_label.ForeColor = System.Drawing.Color.White;
-            this.email_label.Location = new System.Drawing.Point(82, 195);
+            this.email_label.Location = new System.Drawing.Point(25, 167);
             this.email_label.Name = "email_label";
             this.email_label.Size = new System.Drawing.Size(35, 13);
             this.email_label.TabIndex = 3;
@@ -71,7 +73,7 @@ namespace Log_in_Sign_up_app
             // change_username_button
             // 
             this.change_username_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.change_username_button.Location = new System.Drawing.Point(85, 121);
+            this.change_username_button.Location = new System.Drawing.Point(28, 93);
             this.change_username_button.Name = "change_username_button";
             this.change_username_button.Size = new System.Drawing.Size(107, 23);
             this.change_username_button.TabIndex = 4;
@@ -82,7 +84,7 @@ namespace Log_in_Sign_up_app
             // change_email_button
             // 
             this.change_email_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.change_email_button.Location = new System.Drawing.Point(85, 229);
+            this.change_email_button.Location = new System.Drawing.Point(28, 201);
             this.change_email_button.Name = "change_email_button";
             this.change_email_button.Size = new System.Drawing.Size(107, 23);
             this.change_email_button.TabIndex = 5;
@@ -93,7 +95,7 @@ namespace Log_in_Sign_up_app
             // exitbutton
             // 
             this.exitbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitbutton.Location = new System.Drawing.Point(336, 301);
+            this.exitbutton.Location = new System.Drawing.Point(334, 375);
             this.exitbutton.Name = "exitbutton";
             this.exitbutton.Size = new System.Drawing.Size(75, 23);
             this.exitbutton.TabIndex = 6;
@@ -101,12 +103,34 @@ namespace Log_in_Sign_up_app
             this.exitbutton.UseVisualStyleBackColor = true;
             this.exitbutton.Click += new System.EventHandler(this.exitbutton_Click);
             // 
+            // auth2_button
+            // 
+            this.auth2_button.Location = new System.Drawing.Point(28, 315);
+            this.auth2_button.Name = "auth2_button";
+            this.auth2_button.Size = new System.Drawing.Size(107, 23);
+            this.auth2_button.TabIndex = 7;
+            this.auth2_button.Text = "Enable";
+            this.auth2_button.UseVisualStyleBackColor = true;
+            this.auth2_button.Click += new System.EventHandler(this.auth2_button_Click);
+            // 
+            // auth2_label
+            // 
+            this.auth2_label.AutoSize = true;
+            this.auth2_label.ForeColor = System.Drawing.Color.White;
+            this.auth2_label.Location = new System.Drawing.Point(25, 275);
+            this.auth2_label.Name = "auth2_label";
+            this.auth2_label.Size = new System.Drawing.Size(131, 13);
+            this.auth2_label.TabIndex = 8;
+            this.auth2_label.Text = "Two-factor authentication:";
+            // 
             // Log_In
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(453, 450);
+            this.Controls.Add(this.auth2_label);
+            this.Controls.Add(this.auth2_button);
             this.Controls.Add(this.exitbutton);
             this.Controls.Add(this.change_email_button);
             this.Controls.Add(this.change_username_button);
@@ -128,5 +152,7 @@ namespace Log_in_Sign_up_app
         private System.Windows.Forms.Button change_username_button;
         private System.Windows.Forms.Button change_email_button;
         private System.Windows.Forms.Button exitbutton;
+        private System.Windows.Forms.Button auth2_button;
+        private System.Windows.Forms.Label auth2_label;
     }
 }

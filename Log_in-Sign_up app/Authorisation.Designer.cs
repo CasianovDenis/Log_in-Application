@@ -44,7 +44,7 @@ namespace Log_in_Sign_up_app
             // 
             this.Log_In_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Log_In_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Log_In_button.Location = new System.Drawing.Point(136, 234);
+            this.Log_In_button.Location = new System.Drawing.Point(138, 260);
             this.Log_In_button.Name = "Log_In_button";
             this.Log_In_button.Size = new System.Drawing.Size(75, 23);
             this.Log_In_button.TabIndex = 0;
@@ -107,7 +107,7 @@ namespace Log_in_Sign_up_app
             this.Sign_up_link.AutoSize = true;
             this.Sign_up_link.BackColor = System.Drawing.Color.Transparent;
             this.Sign_up_link.LinkColor = System.Drawing.Color.White;
-            this.Sign_up_link.Location = new System.Drawing.Point(233, 239);
+            this.Sign_up_link.Location = new System.Drawing.Point(237, 270);
             this.Sign_up_link.Name = "Sign_up_link";
             this.Sign_up_link.Size = new System.Drawing.Size(45, 13);
             this.Sign_up_link.TabIndex = 7;
@@ -132,7 +132,7 @@ namespace Log_in_Sign_up_app
             // 
             this.Restore_pass_link.AutoSize = true;
             this.Restore_pass_link.LinkColor = System.Drawing.Color.White;
-            this.Restore_pass_link.Location = new System.Drawing.Point(233, 274);
+            this.Restore_pass_link.Location = new System.Drawing.Point(237, 305);
             this.Restore_pass_link.Name = "Restore_pass_link";
             this.Restore_pass_link.Size = new System.Drawing.Size(92, 13);
             this.Restore_pass_link.TabIndex = 9;
@@ -144,7 +144,7 @@ namespace Log_in_Sign_up_app
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(403, 450);
+            this.ClientSize = new System.Drawing.Size(357, 355);
             this.Controls.Add(this.Restore_pass_link);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Sign_up_link);
