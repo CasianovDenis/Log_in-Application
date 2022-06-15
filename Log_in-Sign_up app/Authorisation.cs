@@ -67,7 +67,7 @@ namespace Log_in_Sign_up_app
             string query_username = string.Format("select username from MyTable " +
                "where username='{0}'", usernametextBox.Text);
             string query_password = string.Format("select password from MyTable " +
-               "where  password='{0}'", passwordtextBox.Text);
+               "where  username='{0}'", usernametextBox.Text);
             string query_auth2 = string.Format("select auth2 from MyTable " +
                "where username='{0}'", usernametextBox.Text);
 
@@ -80,23 +80,26 @@ namespace Log_in_Sign_up_app
                 SqlDataReader reader1 = cmd1.ExecuteReader();
                 if (reader1.Read() == true)
                 {
-                    reader1.Close();
-                    SqlCommand cmd2 = new SqlCommand(query_auth2, con);
-                    SqlDataReader reader2 = cmd2.ExecuteReader();
-                    
-                    if (reader2.Read() == true)
+                    if (reader1.GetString(0) == passwordtextBox.Text)
                     {
-                        if (reader2.GetString(0) == "1")
+                        reader1.Close();
+                        SqlCommand cmd2 = new SqlCommand(query_auth2, con);
+                        SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                        if (reader2.Read() == true)
                         {
-                            Verifieaf2 Vaf2 = new Verifieaf2(usernametextBox.Text);
-                            Vaf2.ShowDialog();
-                        }
-                        else
-                            if (reader2.GetString(0) == "0")
-                        {
-                            MessageBox.Show("Successful authentication");
-                            Log_In LI = new Log_In(usernametextBox.Text);
-                            LI.ShowDialog();
+                            if (reader2.GetString(0) == "1")
+                            {
+                                Verifieaf2 Vaf2 = new Verifieaf2(usernametextBox.Text);
+                                Vaf2.ShowDialog();
+                            }
+                            else
+                                if (reader2.GetString(0) == "0")
+                            {
+                                MessageBox.Show("Successful authentication");
+                                Log_In LI = new Log_In(usernametextBox.Text);
+                                LI.ShowDialog();
+                            }
                         }
                     }
                 }
