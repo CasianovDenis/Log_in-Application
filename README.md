@@ -5,5 +5,5 @@
 
 -Was implements "smtp protocol",which send email with secret key,when user change email or change password.
 
--I connected two factor authentication for my application,using service "Google authenticator" and this function can be enabled or disabled any time from user. 
+-I connected two factor authentication for my application,using service "Google authenticator" and this function can be enabled any time from user. 
 Two factor authentication used for protection user account.
