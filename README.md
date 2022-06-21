@@ -1,4 +1,4 @@
-# Log_in-Application
+# Log_in-Application Author:Casianov Denis
 -It's windows forms application, which was created using Microsoft.NET Framework.
 
 -I connected local database,because database needed for "sign in" or "sign up" account.
